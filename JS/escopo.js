@@ -1,7 +1,8 @@
+let estudante;
+
 if (1 > 0) {
-    var estudante = 'Caroline';
+    estudante = 'Caroline';
     console.log(estudante);
 }
 
-estudante = 'Ana';
-console.log(estudante)
+console.log(estudante);
