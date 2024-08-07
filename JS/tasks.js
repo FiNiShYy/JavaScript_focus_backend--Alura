@@ -4,11 +4,24 @@ const variavelBoolean = true;
 
 console.log(
             "TIPO VARIAVEL KAUÃ:", typeof variavelString,
-            "TIPO VARIAVEL 20:", typeof variavelNumber,
-            "TIPO VARIAVEL TRUE:", typeof variavelBoolean
+            "\nTIPO VARIAVEL 20:", typeof variavelNumber,
+            "\nTIPO VARIAVEL TRUE:", typeof variavelBoolean
 )
 
 //======================================================================//
 
 const primeiroNome = "Kauã";
 const ultimoNome = "Miguel";
+
+const primeiroEultimoNome = primeiroNome + " " + ultimoNome;
+const primeiroEultimoNomeTemplate = `${primeiroNome} ${ultimoNome}`;
+
+console.log(
+            "\nPrimeiro nome:", primeiroNome,
+            "\nUltimo nome:", ultimoNome,
+            "\nPrimeiro e ultimo nome:", primeiroEultimoNome,
+            "\nPrimeiro e ultimo nome com template:", primeiroEultimoNomeTemplate      
+)
+
+//======================================================================//
+
