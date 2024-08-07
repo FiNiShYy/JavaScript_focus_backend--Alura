@@ -25,3 +25,13 @@ console.log(
 
 //======================================================================//
 
+const numero = 20;
+const string = "Kauã";
+
+const combinação = `Meu nome é ${string} e tenho ${numero} anos!`;
+
+console.log(
+    "\nIdade:", numero,
+    "\nNome:", string,
+    "\nResultado:", combinação
+)
