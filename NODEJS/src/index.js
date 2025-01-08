@@ -6,7 +6,7 @@ const link = caminhoArquivo[2]
 
 fs.readFile(link, 'utf8', (err, texto) => {
     if (err) {
-        console.log("Qual é o erro?", err);
+        console.log("Qual é o erro?", err.code);
         return
     }
     console.log(contaPalavras(texto))
