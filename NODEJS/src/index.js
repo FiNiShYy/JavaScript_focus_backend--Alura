@@ -6,14 +6,15 @@ const link = caminhoArquivo[2]
 
 fs.readFile(link, 'utf8', (err, texto) => {
 console.log(verificaPalavrasDuplicadas(texto))
-console.log(quebraEmParagrafos(texto))
+// console.log(quebraEmParagrafos(texto))
 })
 
 
-function quebraEmParagrafos (texto) {
+function quebraEmParagrafos(texto) {
     const paragrafos = texto.toLowerCase().split('\n')
-    const contagem = paragrafos.map((paragrago) => {
-        return verificaPalavrasDuplicadas(paragrago)
+    const contagem = paragrafos.flatMap((paragrafo) => {
+        if (!paragrafo) return []
+        return verificaPalavrasDuplicadas(paragrafo)
     })
     console.log(contagem);
 }
