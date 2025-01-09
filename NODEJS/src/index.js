@@ -14,7 +14,6 @@ fs.readFile(link, 'utf8', (err, texto) => {
             return;
         } else {
             console.error('Erro ao ler o arquivo', err);
-            return;
         }
     }
 })
