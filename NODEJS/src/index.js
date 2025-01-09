@@ -1,4 +1,5 @@
 const fs = require('fs');
+import trataErros from './funcoesErro';
 
 const caminhoArquivo = process.argv;
 const link = caminhoArquivo[2]
@@ -6,15 +7,10 @@ const link = caminhoArquivo[2]
 
 fs.readFile(link, 'utf8', (err, texto) => {
     try {
-        if (err) throw err;
+    if (err) throw err;
         contaPalavras(texto)
     } catch(err) {
-        if (err.code === 'ENOENT') {
-            console.error('Arquivo não encontrado');
-            return;
-        } else {
-            console.error('Erro ao ler o arquivo', err);
-        }
+        trataErros(err)
     }
 })
 
