@@ -5,11 +5,18 @@ const link = caminhoArquivo[2]
 
 
 fs.readFile(link, 'utf8', (err, texto) => {
-    if (err) {
-        console.log("Qual é o erro?", err.code);
-        return
+    try {
+        if (err) throw err;
+        contaPalavras(texto)
+    } catch(err) {
+        if (err.code === 'ENOENT') {
+            console.error('Arquivo não encontrado');
+            return;
+        } else {
+            console.error('Erro ao ler o arquivo', err);
+            return;
+        }
     }
-    console.log(contaPalavras(texto))
 })
 
 function contaPalavras(texto) {
