@@ -24,6 +24,6 @@ async function criaESalvaArquivo(listaPalavras, endereco) {
         await fs.promises.writeFile(arquivoNovo, textoPalavras);
         console.log("Arquivo criado!");
     } catch(erro) {
-        throw erro;
+        throw trataErros(erro);
     }
 }
