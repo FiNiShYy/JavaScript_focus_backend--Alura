@@ -1,4 +1,7 @@
 {
+  "name": "aulas-alura",
+  "version": "1.0.0",
+  "type": "module",
   "dependencies": {
     "commander": "^13.0.0"
   }
