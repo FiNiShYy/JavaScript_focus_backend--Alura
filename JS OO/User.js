@@ -54,8 +54,20 @@ export default class User {
     set ativo(ativo) {
         return this.#ativo = ativo;
     }
+    // exibirInfos() {
+    //     return `${this.nome}, ${this.email}`
+    // }
+
     exibirInfos() {
-        return `${this.nome}, ${this.email}`
+        if (this.role === "estudante") {
+            return `Dados estudante - ${this.nome}`
+        }
+        if (this.role === "admin") {
+            return `Dados admin - ${this.nome}, ${this.role}`
+        }
+        if (this.role === "docente") {
+            return `Dados docente - ${this.nome}, ${this.email}`
+        }
     }
 }
 
